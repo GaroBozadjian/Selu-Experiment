@@ -9,7 +9,7 @@ As stated above  SNN  does the normalization inside the activation function whic
 
 ## What is SELU?
 Selu activation function:
-![alt text] (/home/garobozadjian/Selu-Experement-/1_Q_lez8e2mP7MdSZf-O5bKw.png"Selu")
+![alt text](https://github.com/GaroBozadjian/Selu-Experiment/blob/master/1_Q_lez8e2mP7MdSZf-O5bKw.png)
 
 Selu has its constant variables λ and α which don't change, that means they are not hyperparameters and we can't backpropagate them and it looks like ELU but with a slight difference.
 
@@ -384,6 +384,7 @@ for i, nt in enumerate(network_types):
 ## Explain the Visualization:
 
 We are going to start explaining the activation functions without dropout first after that with it dropout.
+![alt text](https://github.com/GaroBozadjian/Selu-Experiment/blob/master/27017007_10204152114318810_753084495_o.png)
 
 ### Activation functions without dropout:
 Frist with Relu activation function, as it is shown in the graph the accuracy of training and validation sets are almost near 1.0 from the layers 1 to 16, for the 32 layers it started from 0.6 and ended near 1.0, but for 64 layers it didn't pass 0.2 because it stops learning.
