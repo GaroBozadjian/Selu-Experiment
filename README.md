@@ -74,7 +74,7 @@ def selu(x):
         return scale*tf.where(x>=0.0, x, alpha*tf.nn.elu(x))
 ```
 ## SELU Dropout
-Then we are going to perform another function that will give us the dropout for SELU activation function.
+Then we are going to perform another function that will give us the dropout for SELU activation function which is known as alpha dropout.
 
 ```python
 def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedPointVar=1.0, 
