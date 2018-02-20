@@ -74,7 +74,7 @@ def selu(x):
         return scale*tf.where(x>=0.0, x, alpha*tf.nn.elu(x))
 ```
 ## SELU Dropout
-Then we are going to perform another function that will give us the dropout for SELU activation function which is known as alpha dropout.
+Then we are going to perform another function that will give us the dropout for SELU activation function which is known as alpha dropout. As we know the normal dropout is not well with Batch Normalization because it is smarting the activations in a randomized way. To solve this problem they introduced the alpha dropout to randomly sets inputs to the saturated negative value of SELU which is −αλ. Then an affine transformation is applied to it with a and b values computed relative to dropout rate, targeted mean and variance.It randomizes network without degrading network properties. 
 
 ```python
 def dropout_selu(x, rate, alpha= -1.7580993408473766, fixedPointMean=0.0, fixedPointVar=1.0, 
